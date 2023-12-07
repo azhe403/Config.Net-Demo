@@ -6,6 +6,7 @@ Console.WriteLine("Hello, World!");
 
 var settings = new ConfigurationBuilder<IRootSetting>()
 	.UseIniFile("config.ini")
+	.UseJsonFile("config.json")
 	.Build();
 
 Console.WriteLine("Last App run: " + settings.AppSetting.LastRun);
